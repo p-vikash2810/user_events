@@ -1,38 +1,129 @@
+* {
+  box-sizing: border-box;
+}
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding: 16px;
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input,
+.events {
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.error {
+  margin-top: 0;
+  font-size: 14px;
+  color: red;
+}
+
+.inline {
   display: flex;
-  flex-direction: column;
+  margin: 10px;
+  /* align-items: center; */
+}
+.inline > input {
+  max-width: 30px;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+button:hover {
+  opacity: 1;
+}
+button:disabled {
+  background-color: #54a486;
+  opacity: 0.4;
+  cursor: default;
+}
+.radio-buttons {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.radio-buttons > div {
+  display: flex;
+}
+
+.event-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.event-table td,
+.event-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+
+.event-table tr:hover {
+  background-color: #ddd;
+}
+
+.event-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+a:active {
+  background-color: #04aa6d;
+}
+
+.primary {
+  background-color: aqua;
 }
